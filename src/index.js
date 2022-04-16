@@ -27,5 +27,3 @@ form.addEventListener('submit', (e) => {
 getApi(urlGame).then((res) => {
   render(res.result);
 });
-
-
