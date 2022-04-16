@@ -17,7 +17,7 @@ Leaderboard API project from more than one project worked on doing list active t
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://karam084.github.io/leaderboard/)
 
 ## Run project
 
