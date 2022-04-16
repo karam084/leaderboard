@@ -8,7 +8,6 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      // Please change the template path!
       template: './src/index.html',
     }),
   ],
