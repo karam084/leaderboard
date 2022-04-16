@@ -4,8 +4,7 @@ import './style.css';
 import render from './modules/renderApi.js';
 import { postApi, getApi } from './modules/apiImplement.js';
 
-const urlGame =
-  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/f5n9vuYoe82B6F8funh2/scores/';
+const urlGame = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/f5n9vuYoe82B6F8funh2/scores/';
 
 const form = document.getElementById('form');
 const refresh = document.getElementById('refresh');
