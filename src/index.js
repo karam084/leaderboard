@@ -1,42 +1,39 @@
-import './styles.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+/* eslint-disable no-unused-vars */
+import 'lodash';
+import './style.css';
+import render from './modules/renderApi.js';
+import { postApi, getApi } from './modules/apiImplement.js';
 
-const players = [
-  {
-    name: 'Karam',
-    score: 100,
-  },
-  {
-    name: 'Aly',
-    score: 60,
-  },
-  {
-    name: 'Toleen',
-    score: 12,
-  },
-  {
-    name: 'Mohamed',
-    score: 40,
-  },
-  {
-    name: 'Bayanssy',
-    score: 20,
-  },
-  {
-    name: 'Nada',
-    score: 55,
-  },
-];
+const urlGame =
+  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/f5n9vuYoe82B6F8funh2/scores/';
 
-const render = () => {
-  const table = document.getElementById('score-table');
-  players.forEach((player, index) => {
-    const { name, score } = player;
-    table.innerHTML += `<tr id="user-${index}">
-      <td id="name-${index}">${name}</td>
-      <td id="score-${index}">${score}</td>
-      </tr>`;
+const form = document.getElementById('form');
+const refresh = document.getElementById('refresh');
+const table = document.getElementById('score-table');
+const icon = document.querySelector('.icon');
+
+refresh.addEventListener('click', () => {
+  getApi(urlGame).then((response) => {
+    table.innerHTML = '';
+    render(response.result);
   });
-};
+});
 
-render();
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  postApi(urlGame);
+  e.target.reset();
+});
+
+getApi(urlGame).then((res) => {
+  render(res.result);
+});
+
+icon.addEventListener('click', (e) => {
+  document.body.classList.toggle('dark-theme');
+  if (document.body.classList.contains('dark-theme')) {
+    e.target.src = 'assets/images/sun.png';
+  } else {
+    e.target.src = 'assets/images/moon.png';
+  }
+});
