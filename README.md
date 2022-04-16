@@ -2,7 +2,10 @@
 
 Leaderboard API project from more than one project worked on doing list active that built with HTML, CSS, javascript, and webpack packages
 
-![Screenshot](https://user-images.githubusercontent.com/77942746/163509661-5d790188-195d-4d1a-a9b9-7b09ddadcd46.png)
+![Screenshot](https://user-images.githubusercontent.com/77942746/163673336-ce812a71-2ea4-4ae3-b3dd-2e306ffce2ca.png)
+
+![Screenshot](https://user-images.githubusercontent.com/77942746/163673366-c17ff333-e9b8-4a41-9c57-b23fc5775fd2.png)
+
 
 ## Built With
 

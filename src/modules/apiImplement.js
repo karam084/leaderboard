@@ -18,7 +18,6 @@ const postApi = async (url) => {
 
 const getApi = async (url) => {
   const response = await fetch(url);
-  // Storing data in form of JSON
   const result = await response.json();
   if (result) {
     document.getElementById('loading').style.display = 'none';
